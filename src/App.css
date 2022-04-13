@@ -38,3 +38,13 @@
   padding: 0 0.5rem;
   color: white;
 }
+
+.counter {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color:  #E3E8B3;
+
+}
