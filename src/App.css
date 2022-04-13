@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.game-screen-container {
+  position: relative;
+}
+
 
 .start-button {
   position: absolute;
@@ -18,5 +22,19 @@
   border-radius: 3.5rem;
   height: 3.5rem;
   padding: 0 2.5rem;
+  color: white;
+}
+
+.plus-button {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background-color: #8FB062;
+  border: none;
+  border-radius: 24px;
+  height: 3.5rem;
+  padding: 0 0.5rem;
   color: white;
 }
