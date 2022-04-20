@@ -38,7 +38,7 @@ function CountDownTimer() {
   useEffect(() => {
     setInterval(() => {
       setShowComponent(false);
-    }, 5000);
+    }, 15000);
   }, []);
 
   return <>
@@ -95,7 +95,7 @@ const HideIn15Seconds = () => {
   useEffect(() => {
     setInterval(() => {
       setShowComponent(false);
-    }, 5000);
+    }, 15000);
   }, []);
 
   return <> {
@@ -111,7 +111,7 @@ const RenderIn15Seconds = () => {
   useEffect(() => {
     setInterval(() => {
       setShowComponent(true);
-    }, 5000);
+    }, 15000);
   }, []);
 
   return <> {
