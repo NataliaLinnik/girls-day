@@ -1,15 +1,34 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-function GameScreen() {
-  const [counter, setCounter] = useState(0);
+function GameScreen({ counter, setCounter }) {
+  const buttonClicked = () => {
+    setCounter(counter + 1);
+  }
+
   return (
     <div className="game-screen-container">
       <img
-        src="/images/bg-game.svg"
-        alt="Green field"
+        className="bg-hills"
+        src="/images/bg-hills.svg"
+        alt="Green hills"
+      />
+      <img
+        className="bg-leaves"
+        src="/images/bg-leaves.svg"
+        alt="Three leaves"
       />
       <CountDownTimer />
-      <ClickCounter counter={counter} setCounter={setCounter} />
+      <div>
+      <div className='counter'>{counter}
+        <br /> CLICKS
+      </div>
+      <button className="plus-button" onClick={buttonClicked}>
+        <img
+          src="/images/plus-icon.svg"
+          alt="Plus Icon"
+        />
+      </button>
+    </div>
     </div>
   );
 }
@@ -38,26 +57,6 @@ function CountDownTimer() {
     <div className="countdown">{timer}
       <br /> SEKUNDEN</div>
   )
-}
-
-function ClickCounter({ counter, setCounter }) {
-  const buttonClicked = () => {
-    setCounter(counter + 1);
-  }
-
-  return (
-    <div>
-      <div className='counter'>{counter}
-        <br /> CLICKS
-      </div>
-      <button className="plus-button" onClick={buttonClicked}>
-        <img
-          src="/images/plus-icon.svg"
-          alt="Plus Icon"
-        />
-      </button>
-    </div>
-  );
 }
 
 export default GameScreen;

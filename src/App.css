@@ -54,10 +54,6 @@ p {
   padding: 0 30px 0 30px;
 }
 
-.end-screen-container {
-  position: relative;
-}
-
 .start-button {
   margin-top: 20px;
   background-color: #8FB062;
@@ -70,6 +66,9 @@ p {
 
 .game-screen-container {
   position: relative;
+  background-color: #FFF0D2;
+  width: 100vw;
+  height: 100vh;
 }
 
 .countdown {
@@ -107,7 +106,13 @@ p {
   transform: translate(-50%, -50%);
   font-size: 40px;
   color: #E3E8B3;
+}
 
+.end-screen-container {
+  position: relative;
+  background-color: #FFF0D2;
+  width: 100vw;
+  height: 100vh;
 }
 
 .success {
