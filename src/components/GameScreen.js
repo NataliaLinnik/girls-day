@@ -1,71 +1,63 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 function GameScreen() {
+  const [counter, setCounter] = useState(0);
   return (
     <div className="game-screen-container">
       <img
         src="/images/bg-game.svg"
         alt="Green field"
       />
-      <ClickCounter/>
-      <CountDownTimer/>
+      <CountDownTimer />
+      <ClickCounter counter={counter} setCounter={setCounter} />
     </div>
   );
 }
 
 function CountDownTimer() {
-  const [timer, setTimer] = React.useState(5);
-  const id =React.useRef(null);
-  const clear=()=>{
-  window.clearInterval(id.current)
-}
-  React.useEffect(()=>{
-     id.current=window.setInterval(()=>{
-      setTimer((time)=>time-1)
-    },1000)
-    return ()=>clear();
-  },[])
+  const [timer, setTimer] = useState(15);
+  const id = useRef(null);
+  const clear = () => {
+    window.clearInterval(id.current)
+  }
 
-  React.useEffect(()=>{
-    if(timer===0){
+  useEffect(() => {
+    id.current = window.setInterval(() => {
+      setTimer((time) => time - 1)
+    }, 1000)
+    return () => clear();
+  }, [])
+
+  useEffect(() => {
+    if (timer === 0) {
       clear()
     }
-
-  },[timer])
+  }, [timer])
 
   return (
     <div className="countdown">{timer}
-      <br/> SEKUNDEN
-    </div>
-  );
+      <br /> SEKUNDEN</div>
+  )
 }
 
-class ClickCounter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: 0};
-    this.buttonClicked = this.buttonClicked.bind(this);
+function ClickCounter({ counter, setCounter }) {
+  const buttonClicked = () => {
+    setCounter(counter + 1);
   }
-  
-  buttonClicked(event) {
-    this.setState({value: this.state.value + 1});
-  }
-  
-  render() {
-    return (
-    	<div>
-        <div className='counter'>{this.state.value}
-          <br/> CLICKS
-        </div>
-        <button className="plus-button" onClick={this.buttonClicked}>
+
+  return (
+    <div>
+      <div className='counter'>{counter}
+        <br /> CLICKS
+      </div>
+      <button className="plus-button" onClick={buttonClicked}>
         <img
           src="/images/plus-icon.svg"
           alt="Plus Icon"
         />
       </button>
-      </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default GameScreen;

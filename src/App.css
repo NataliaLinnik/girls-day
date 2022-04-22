@@ -145,6 +145,10 @@ p {
   padding: 0 30px 0 30px;
 }
 
+.end-screen-container {
+  position: relative;
+}
+
 .start-button {
   margin-top: 20px;
   background-color: #8FB062;
@@ -195,4 +199,40 @@ p {
   font-size: 40px;
   color: #E3E8B3;
 
+}
+
+.success {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.play-again-button {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3.5rem;
+  height: 3.5rem;
+  padding: 0 2.5rem;
+  color: white;
+}
+
+.share-button {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #8FB062;
+  border: none;
+  border-radius: 3.5rem;
+  height: 3.5rem;
+  padding: 0 2.5rem;
+  color: white;
 }
