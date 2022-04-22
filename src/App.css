@@ -18,7 +18,7 @@ p {
 
 .start-screen-container {
   position: relative;
-  background-color: #FFF0D2;
+  background-image: linear-gradient(#D2F3ED, #FFF0D2, #FFF0D2);
   width: 100vw;
   height: 100vh;
 }
@@ -26,15 +26,14 @@ p {
 .bg-hills {
   position: absolute;
   object-fit: fill;
-  width: inherit;
+  width: 100vw;
   height: 639px;
   bottom: 0;
   left: 0;
 }
 
-.bg-leaves {
+.bg-leaves-1 {
   position: absolute;
-  object-fit: fill;
   width: 50%;
   height: 60px;
   bottom: 550px;
@@ -49,23 +48,75 @@ p {
   right: 50px;
 }
 
-.stuttgart-small-tree {
+/* Bees ------------------------------------------ */
+
+.bee-1 {
   position: absolute;
-  width: 40%;
-  height: 123px;
-  bottom: 570px;
-  right: 50px;
+  left: 30%;
+  width: 50px;
+  bottom: 700px;
 }
 
-.bee {
+.bee-2 {
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  width: 80px;
-  bottom: 420px;
+  right: 25%;
+  width: 50px;
+  bottom: 750px;
+  transform: scaleX(-1);
 }
+
+/* Flowers --------------------------------------- */
+
+.flower-group-1 {
+  position: absolute;
+  left: 5%;
+  bottom: 570px;
+}
+
+.flower-group-2 {
+  position: absolute;
+  left: 20%;
+  bottom: 550px;
+}
+
+.flower-group-3 {
+  position: absolute;
+  left: 30%;
+  bottom: 600px;
+}
+
+.flower-group-4 {
+  position: absolute;
+  left: 50%;
+  bottom: 550px;
+}
+
+.flower-group-5 {
+  position: absolute;
+  right: 15%;
+  bottom: 560px;
+}
+
+.flower-group-6 {
+  position: absolute;
+  right: 5%;
+  bottom: 490px;
+}
+
+.flower-group-7 {
+  position: absolute;
+  right: 20%;
+  bottom: 480px;
+}
+
+.info-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #00000000;
+  border: none;
+}
+
 
 .start-screen-textbox {
   position: absolute;
