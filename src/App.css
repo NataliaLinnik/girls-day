@@ -10,6 +10,10 @@
   position: relative;
 }
 
+.end-screen-container {
+  position: relative;
+}
+
 .start-button {
   position: absolute;
   bottom: 25%;
@@ -70,7 +74,7 @@
 
 }
 
-.whatsapp-button {
+.play-again-button {
   position: absolute;
   bottom: 20%;
   left: 50%;
