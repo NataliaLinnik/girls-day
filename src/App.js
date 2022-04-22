@@ -6,7 +6,8 @@ import StartScreen from './components/StartScreen';
 
 function App() {
   const [isGameRunning, setIsGameRunning] = useState(false);
-  const [showEndScreen, setShowEndScreen] = useState(false)
+  const [showEndScreen, setShowEndScreen] = useState(false);
+  const [counter, setCounter] = useState(0);
 
   // Hides GameScreen after 15sec
   useEffect(() => {
@@ -20,10 +21,10 @@ function App() {
 
   const showPage = () => {
     if (isGameRunning) {
-      return <GameScreen />;
+      return <GameScreen counter={counter} setCounter={setCounter}/>;
     } else if (showEndScreen) {
       // TODO: Counter to be moved from Gamescreen (Minh)
-      return <EndScreen counter={20} />;
+      return <EndScreen counter={counter} />;
     } else {
       return <StartScreen setIsGameRunning={setIsGameRunning} />;
     }
