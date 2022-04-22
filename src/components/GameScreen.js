@@ -1,6 +1,8 @@
-import React, { Component, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 function GameScreen() {
+
+  const [counter, setCounter] = useState(0);
   return (
     <div className="game-screen-container">
       <img
@@ -8,8 +10,8 @@ function GameScreen() {
         alt="Green field"
       />
       <CountDownTimer />
-      <HideIn15Seconds />
-      <RenderIn15Seconds />
+      <HideIn15Seconds counter={counter} setCounter={setCounter} />
+      <RenderIn15Seconds counter={counter} />
     </div>
   );
 }
@@ -49,47 +51,38 @@ function CountDownTimer() {
   </>
 }
 
-class ClickCounter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: 0 };
-    this.buttonClicked = this.buttonClicked.bind(this);
+function ClickCounter({ counter, setCounter }) {
+  const buttonClicked = () => {
+    setCounter(counter + 1);
   }
 
-  buttonClicked(event) {
-    this.setState({ value: this.state.value + 1 });
-  }
-
-  render() {
-    return (
-      <div>
-        <div className='counter'>{this.state.value}
-          <br /> CLICKS
-        </div>
-        <button className="plus-button" onClick={this.buttonClicked}>
-          <img
-            src="/images/plus-icon.svg"
-            alt="Plus Icon"
-          />
-        </button>
+  return (
+    <div>
+      <div className='counter'>{counter}
+        <br /> CLICKS
       </div>
-    );
-  }
+      <button className="plus-button" onClick={buttonClicked}>
+        <img
+          src="/images/plus-icon.svg"
+          alt="Plus Icon"
+        />
+      </button>
+    </div>
+  );
 }
 
-class EndScreen extends React.Component {
-  render() {
-    return (
-      <div>
-        <div className='success'>Gut gemacht!</div>
-        <button className='whatsapp-button'>Zurück zu WhatsApp</button>
-        <button className='share-button'>Ergebnis teilen</button>
-      </div>
-    )
-  }
+function EndScreen({ counter }) {
+  return (
+    <div>
+      <div>{counter}</div>
+      <div className='success'>Gut gemacht!</div>
+      <button className='whatsapp-button'>Nochmal spielen</button>
+      <button className='share-button'>Ergebnis teilen</button>
+    </div>
+  )
 }
 
-const HideIn15Seconds = () => {
+const HideIn15Seconds = ({ counter, setCounter }) => {
   const [showComponent, setShowComponent] = useState(true);
 
   useEffect(() => {
@@ -100,12 +93,12 @@ const HideIn15Seconds = () => {
 
   return <> {
     showComponent &&
-    <ClickCounter />
+    <ClickCounter counter={counter} setCounter={setCounter} />
   }
   </>
 }
 
-const RenderIn15Seconds = () => {
+const RenderIn15Seconds = ({ counter }) => {
   const [showComponent, setShowComponent] = useState(false);
 
   useEffect(() => {
@@ -115,7 +108,7 @@ const RenderIn15Seconds = () => {
   }, []);
 
   return <> {
-    showComponent && <EndScreen />
+    showComponent && <EndScreen counter={counter} />
   }
   </>
 }
