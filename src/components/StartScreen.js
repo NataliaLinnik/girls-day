@@ -2,14 +2,24 @@ function StartScreen({ setIsGameScreen }) {
   return (
     <div className="start-screen-container">
       <img
-        src="/images/bg-start-screen.svg"
-        alt="Green fields with some leafs"
+        className="bg-hills"
+        src="/images/bg-hills.svg"
+        alt="Green hills"
+      />
+      <img
+        className="bg-leaves"
+        src="/images/bg-leaves.svg"
+        alt="Three leaves"
       />
 
-      <button className="start-button" onClick={() => setIsGameScreen(true)}>
-        Starten
-      </button>
-    </div>
+      <div className="start-screen-textbox">
+        <h3>Lorem Ipsum<br />dolor sit amet</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <button className="start-button" onClick={() => setIsGameScreen(true)}>
+          Starten
+        </button>
+      </div>
+    </div >
   );
 }
 
