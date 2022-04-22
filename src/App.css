@@ -23,45 +23,52 @@ p {
   height: 100vh;
 }
 
+.start-screen-background {
+  position: absolute;
+  height: 70%;
+  width: 100vw;
+  bottom: 0;
+}
+
 .bg-hills {
   position: absolute;
-  object-fit: fill;
+  height: 100%;
   width: 100vw;
-  height: 639px;
   bottom: 0;
   left: 0;
 }
 
 .bg-leaves-1 {
   position: absolute;
-  width: 50%;
-  height: 60px;
-  bottom: 550px;
-  left: 0;
+  bottom: 80%;
+  top: 3%;
+  left: 12%;
+  width: 20%;
+  height: 50px;
 }
 
 .bg-leaves-2 {
   position: absolute;
-  width: 40%;
+  top: 12%;
+  right: 15%;
+  width: 20%;
   height: 10px;
-  bottom: 550px;
-  right: 50px;
 }
 
 /* Bees ------------------------------------------ */
 
 .bee-1 {
   position: absolute;
+  top: -15%;
   left: 30%;
   width: 50px;
-  bottom: 700px;
 }
 
 .bee-2 {
   position: absolute;
+  top: -30%;
   right: 25%;
   width: 50px;
-  bottom: 750px;
   transform: scaleX(-1);
 }
 
@@ -69,44 +76,51 @@ p {
 
 .flower-group-1 {
   position: absolute;
+  top: -4%;
   left: 5%;
-  bottom: 570px;
+  height: 15%;
 }
 
 .flower-group-2 {
   position: absolute;
+  top: 3%;
   left: 20%;
-  bottom: 550px;
+  height: 13%;
 }
 
 .flower-group-3 {
   position: absolute;
+  top: -4%;
   left: 30%;
-  bottom: 600px;
+  height: 14%;
 }
 
 .flower-group-4 {
   position: absolute;
+  top: 2%;
   left: 50%;
-  bottom: 550px;
+  height: 13%;
 }
 
 .flower-group-5 {
   position: absolute;
-  right: 15%;
-  bottom: 560px;
+  top: -2%;
+  right: 20%;
+  height: 13%;
 }
 
 .flower-group-6 {
   position: absolute;
+  top: 6%;
   right: 5%;
-  bottom: 490px;
+  height: 17%;
 }
 
 .flower-group-7 {
   position: absolute;
   right: 20%;
-  bottom: 480px;
+  top: 15%;
+  height: 10%;
 }
 
 .info-button {

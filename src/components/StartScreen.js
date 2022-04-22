@@ -16,7 +16,7 @@ function StartScreen({ setIsGameScreen }) {
 
 function StartScreenBackground() {
   return (
-    <div>
+    <div className="start-screen-background">
       <img
         className="bg-hills"
         src="/images/bg-hills.svg"
