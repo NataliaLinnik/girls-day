@@ -1,4 +1,4 @@
-function StartScreen({ setIsGameScreen }) {
+function StartScreen({ setIsGameRunning }) {
   return (
     <div className="start-screen-container">
       <img
@@ -15,7 +15,7 @@ function StartScreen({ setIsGameScreen }) {
       <div className="start-screen-textbox">
         <h3>Lorem Ipsum<br />dolor sit amet</h3>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        <button className="start-button" onClick={() => setIsGameScreen(true)}>
+        <button className="start-button" onClick={() => setIsGameRunning(true)}>
           Starten
         </button>
       </div>
