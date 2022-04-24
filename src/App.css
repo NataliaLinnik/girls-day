@@ -60,10 +60,6 @@ p {
   padding: 0 30px 0 30px;
 }
 
-.end-screen-container {
-  position: relative;
-}
-
 .start-button {
   margin-top: 20px;
   background-color: #8FB062;
@@ -76,20 +72,32 @@ p {
 
 .game-screen-container {
   position: relative;
+  background-color: #FFF0D2;
+  width: 100vw;
+  height: 100vh;
 }
 
 .countdown {
   position: absolute;
-  top: 25%;
+  top: 12%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   background-color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 100%;
   /* Entfernen für Bug */
-  height: 3.5rem;
-  padding: 0 0.5rem;
+  padding: 1.2rem;
+  color: #30411F;
+}
+
+.countdown-timer {
+  font-size: 40px;
+}
+
+.countdown-text {
+  font-size: 14px;
+  padding-bottom: 8px;
 }
 
 .plus-button {
@@ -106,14 +114,28 @@ p {
   color: white;
 }
 
-.counter {
+.counter-container {
   position: absolute;
-  bottom: 30%;
+  bottom: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
   color: #E3E8B3;
+}
 
+.counter {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.clicks-text {
+  font-size: 18px;
+}
+
+.end-screen-container {
+  position: relative;
+  background-color: #FFF0D2;
+  width: 100vw;
+  height: 100vh;
 }
 
 .success {
