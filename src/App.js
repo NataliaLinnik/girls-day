@@ -23,7 +23,7 @@ function App() {
 
   const showPage = () => {
     if (showInfoPage) {
-      return <InfoScreen />;
+      return <InfoScreen setShowInfoPage={setShowInfoPage} />;
     } else if (isGameRunning) {
       return <GameScreen counter={counter} setCounter={setCounter} />;
     } else if (showEndScreen) {

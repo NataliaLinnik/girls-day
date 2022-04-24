@@ -188,11 +188,12 @@ a:hover {
 }
 
 .info-screen-container {
+  position: relative;
   background-color: #304120;
   height: calc(100vh - 32px);
   padding: 16px;
   text-align: left;
-  color: white;
+  color: white; 
 }
 
 .info-icon {
@@ -200,6 +201,15 @@ a:hover {
   right: 16px;
   top: 16px;
   height: 32px;
+  padding: 8px;
+  z-index: 10;
+}
+
+.close-icon {
+  height: 24px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
   padding: 8px;
   z-index: 10;
 }

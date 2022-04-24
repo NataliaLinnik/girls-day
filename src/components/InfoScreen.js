@@ -1,6 +1,12 @@
-function InfoScreen() {
+function InfoScreen({ setShowInfoPage }) {
   return (
     <div className="info-screen-container">
+      <img
+        className="close-icon"
+        src="/images/close-icon.svg"
+        alt="close this page"
+        onClick={() => setShowInfoPage(false)}
+      />
       <h1>Danke für deine Teilnahme am Girls Day!</h1>
       <h2>Präsentationen:</h2>
       <div className="list-container">
