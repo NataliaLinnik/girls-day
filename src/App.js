@@ -15,13 +15,13 @@ function App() {
       setInterval(() => {
         setIsGameRunning(false);
         setShowEndScreen(true);
-      }, 15000);
+      }, 20000);
     }
   }, [isGameRunning]);
 
   const showPage = () => {
     if (isGameRunning) {
-      return <GameScreen counter={counter} setCounter={setCounter}/>;
+      return <GameScreen counter={counter} setCounter={setCounter} />;
     } else if (showEndScreen) {
       // TODO: Counter to be moved from Gamescreen (Minh)
       return <EndScreen counter={counter} />;
@@ -30,12 +30,7 @@ function App() {
     }
   };
 
-  return (
-    <div className="App">
-      {showPage()}
-    </div>
-
-  )
+  return <div className="App">{showPage()}</div>;
 }
 
 export default App;
