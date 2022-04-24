@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 function CountDownTimer({
   value,
   showText = false,
-  style = '',
+  counterStyle,
   startTimer = false,
   timeout,
 }) {
@@ -32,7 +32,7 @@ function CountDownTimer({
   }, [timer, timeout]);
 
   return (
-    <div className={style}>
+    <div className={counterStyle}>
       <div>{timer}</div>
       {showText && <div className="countdown-text">SEKUNDEN</div>}
     </div>

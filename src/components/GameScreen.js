@@ -22,7 +22,7 @@ function GameScreen({ counter, setCounter }) {
             value={5}
             startTimer
             timeout={setStartGame}
-            style={'before-game-countdown'}
+            counterStyle={'before-game-countdown'}
           />
 
           <img
@@ -45,7 +45,7 @@ function GameScreen({ counter, setCounter }) {
             value={15}
             showText
             startTimer={startGame}
-            style={'countdown'}
+            counterStyle={'countdown'}
           />
           <div>
             <div className="counter-container">
