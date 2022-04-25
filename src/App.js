@@ -3,10 +3,13 @@ import './App.css';
 import GameScreen from './components/GameScreen';
 import EndScreen from './components/EndScreen';
 import StartScreen from './components/StartScreen';
+import InfoScreen from './components/InfoScreen';
 
 function App() {
   const [isGameRunning, setIsGameRunning] = useState(false);
-  const [showEndScreen, setShowEndScreen] = useState(false)
+  const [showEndScreen, setShowEndScreen] = useState(false);
+  const [showInfoPage, setShowInfoPage] = useState(false);
+  const [counter, setCounter] = useState(0);
 
   // Hides GameScreen after 15sec
   useEffect(() => {
@@ -19,22 +22,23 @@ function App() {
   }, [isGameRunning]);
 
   const showPage = () => {
-    if (isGameRunning) {
-      return <GameScreen />;
+    if (showInfoPage) {
+      return <InfoScreen setShowInfoPage={setShowInfoPage} />;
+    } else if (isGameRunning) {
+      return <GameScreen counter={counter} setCounter={setCounter} />;
     } else if (showEndScreen) {
-      // TODO: Counter to be moved from Gamescreen (Minh)
-      return <EndScreen counter={20} />;
+      return <EndScreen counter={counter} setShowInfoPage={setShowInfoPage} />;
     } else {
-      return <StartScreen setIsGameRunning={setIsGameRunning} />;
+      return (
+        <StartScreen
+          setIsGameRunning={setIsGameRunning}
+          setShowInfoPage={setShowInfoPage}
+        />
+      );
     }
   };
 
-  return (
-    <div className="App">
-      {showPage()}
-    </div>
-
-  )
+  return <div className="App">{showPage()}</div>;
 }
 
 export default App;
