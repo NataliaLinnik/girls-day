@@ -7,8 +7,8 @@ function GameScreen({ counter, setCounter, height, setHeight, width, setWidth })
   const buttonClicked = () => {
     setCounter(counter + 1);
     // TODO: Abfrage auf maximale Höhe und Breite
-    setHeight(height + (counter * 0, 2))
-    setWidth(width + (counter * 0, 2))
+    setHeight(height + (counter * 0.05))
+    setWidth(width + (counter * 0.05))
   }
 
   return (
