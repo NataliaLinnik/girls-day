@@ -27,7 +27,7 @@ function App() {
     } else if (isGameRunning) {
       return <GameScreen counter={counter} setCounter={setCounter} />;
     } else if (showEndScreen) {
-      return <EndScreen counter={counter} setShowInfoPage={setShowInfoPage} />;
+      return <EndScreen counter={counter} setShowInfoPage={setShowInfoPage} setShowEndScreen={setShowEndScreen} setCounter={setCounter} setIsGameRunning={setIsGameRunning} />;
     } else {
       return (
         <StartScreen
