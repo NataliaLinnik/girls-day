@@ -187,6 +187,7 @@ a:hover {
 }
 
 .success {
+  width: 100%;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -195,11 +196,13 @@ a:hover {
   font-family: "Roboto-Light";
   font-size: 32px;
   line-height: 32px;
+  color: #263238;
 }
 
-.successDescription {
+.success-description {
+  width: 100%;
   position: absolute;
-  bottom: 35%;
+  bottom: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -209,9 +212,9 @@ a:hover {
   line-height: 20px;
 }
 
-.successPrice {
+.success-price {
   position: absolute;
-  bottom: 28%;
+  bottom: 22%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -221,9 +224,9 @@ a:hover {
   line-height: 32px;
 }
 
-.play-again-button {
+.play-again-button, .share-button {
   position: absolute;
-  bottom: 15%;
+  bottom: 12%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -231,28 +234,18 @@ a:hover {
   font-size: 16px;
   background-color: transparent;
   border: 1px solid white;
-  border-radius: 3.5rem;
-  height: 3.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
   padding: 0 2.5rem;
-  width: 50%;
+  width: 60%;
   color: white;
 }
 
-.share-button {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.share-button {  
+  bottom: 4%;
 
-  font-family: "Roboto-Medium";
-  font-size: 16px;
   background-color: #8FB062;
   border: none;
-  border-radius: 3.5rem;
-  height: 3.5rem;
-  width: 50%;
-  padding: 0 2.5rem;
-  color: white;
 }
 
 .info-screen-container {
