@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import CountDownTimer from './CountDownTimer';
 
-function GameScreen({ counter, setCounter }) {
-  const [height, setHeight] = useState(150);
-  const [width, setWidth] = useState(150);
+function GameScreen({ counter, setCounter, height, setHeight, width, setWidth }) {
   const [startGame, setStartGame] = useState(false);
 
   const buttonClicked = () => {

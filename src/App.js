@@ -10,6 +10,8 @@ function App() {
   const [showEndScreen, setShowEndScreen] = useState(false);
   const [showInfoPage, setShowInfoPage] = useState(false);
   const [counter, setCounter] = useState(0);
+  const [height, setHeight] = useState(150);
+  const [width, setWidth] = useState(150);
 
   // Hides GameScreen after 15sec
   useEffect(() => {
@@ -25,9 +27,9 @@ function App() {
     if (showInfoPage) {
       return <InfoScreen setShowInfoPage={setShowInfoPage} />;
     } else if (isGameRunning) {
-      return <GameScreen counter={counter} setCounter={setCounter} />;
+      return <GameScreen counter={counter} setCounter={setCounter} height={height} setHeight={setHeight} width={width} setWidth={setWidth}/>;
     } else if (showEndScreen) {
-      return <EndScreen counter={counter} setShowInfoPage={setShowInfoPage} />;
+      return <EndScreen counter={counter} height={height} setHeight={setHeight} width={width} setWidth={setWidth} setShowInfoPage={setShowInfoPage} />;
     } else {
       return (
         <StartScreen
