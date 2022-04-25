@@ -1,8 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
+import CountDownTimer from './CountDownTimer';
 
 function GameScreen({ counter, setCounter }) {
   const [height, setHeight] = useState(150);
   const [width, setWidth] = useState(150);
+  const [startGame, setStartGame] = useState(false);
 
   const buttonClicked = () => {
     setCounter(counter + 1);
@@ -11,53 +13,57 @@ function GameScreen({ counter, setCounter }) {
   }
 
   return (
-    <div className="game-screen-container" onClick={buttonClicked}>
-      <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
-      <img
-        className="bg-leaves"
-        src="/images/bg-leaves.svg"
-        alt="Three leaves"
-      />
-      <img
-        className="asset-tree"
-        src="/images/tree.svg"
-        style={{width, height}}
-      />
-      <CountDownTimer />
-      <div>
-        <div className="counter-container">
-          <div className="counter">{counter}</div>
-          <div className="clicks-text">CLICKS</div>
+    <div
+      className={'game-screen-container'}
+      onClick={startGame && buttonClicked}
+    >
+      {!startGame && (
+        <div className={`${!startGame ? 'overlay' : ''}`}>
+          <span className="hint-before-game">
+            Tippe so schnell du kannst in
+          </span>
+          <CountDownTimer
+            value={5}
+            startTimer
+            timeout={setStartGame}
+            counterStyle={'before-game-countdown'}
+          />
+
+          <img
+            className="finger-icon"
+            src="/images/finger-icon.svg"
+            alt="icon with a finger clicking on the screen"
+          />
         </div>
-      </div>
-    </div>
-  );
-}
+      )}
+      <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
 
-function CountDownTimer() {
-  const [timer, setTimer] = useState(15);
-  const id = useRef(null);
-  const clear = () => {
-    window.clearInterval(id.current);
-  };
-
-  useEffect(() => {
-    id.current = window.setInterval(() => {
-      setTimer(time => time - 1);
-    }, 1000);
-    return () => clear();
-  }, []);
-
-  useEffect(() => {
-    if (timer === 0) {
-      clear();
-    }
-  }, [timer]);
-
-  return (
-    <div className="countdown">
-      <div className="countdown-timer">{timer}</div>
-      <div className="countdown-text">SEKUNDEN</div>
+      {startGame && (
+        <>
+          <img
+            className="bg-leaves"
+            src="/images/bg-leaves.svg"
+            alt="Three leaves"
+          />
+          <img
+            className="asset-tree"
+            src="/images/tree.svg"
+            style={{ width, height }}
+          />
+          <CountDownTimer
+            value={15}
+            showText
+            startTimer={startGame}
+            counterStyle={'countdown'}
+          />
+          <div>
+            <div className="counter-container">
+              <div className="counter">{counter}</div>
+              <div className="clicks-text">CLICKS</div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
