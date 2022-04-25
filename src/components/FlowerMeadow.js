@@ -12,11 +12,16 @@ function FlowerMeadow({ flowers }) {
             <div>
                 {flowers.map((flower) => {
                     return (
-                        <img src={flower.asset} key={flower.key} style={flowerStyle(
-                            flower.positionX,
-                            flower.positionY,
-                            flower.height
-                        )} />
+                        <img
+                            src={flower.asset}
+                            key={flower.key}
+                            style={flowerStyle(
+                                flower.positionX,
+                                flower.positionY,
+                                flower.height
+                            )}
+                            alt="A flower"
+                        />
                     )
                 })}</div>
         </div>
