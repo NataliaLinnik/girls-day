@@ -29,6 +29,9 @@ a:hover {
   position: relative;
 }
 
+/* Startscreen ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
 .start-screen-container {
   position: relative;
   background-color: #FFF0D2;
@@ -65,7 +68,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  bottom: 80px;
+  bottom: 60px;
   left: 0;
   right: 0;
   max-height: 639px;
@@ -82,6 +85,9 @@ a:hover {
   padding: 0 2.5rem;
   color: white;
 }
+
+/* Gamescreen ----------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
 
 .game-screen-container {
   position: relative;
@@ -116,6 +122,7 @@ a:hover {
   padding: 1.2rem;
   color: #30411F;
   font-size: 40px;
+  z-index: 9;
 }
 
 .hint-before-game {
@@ -143,23 +150,25 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
+.game-end-screen-background {
+  position: absolute;
+  height: 83%;
+  width: 100vw;
+  bottom: 0;
+}
+
+.bg-hill-counter {
+  position: absolute;
+  height: 35%;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+
 .countdown-text {
   font-size: 14px;
   padding-bottom: 8px;
-}
-
-.plus-button {
-  position: absolute;
-  bottom: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  background-color: #8FB062;
-  border: none;
-  border-radius: 24px;
-  height: 3.5rem;
-  padding: 0 0.5rem;
-  color: white;
 }
 
 .counter-container {
@@ -168,6 +177,7 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #E3E8B3;
+  z-index: 9;
 }
 
 .counter {
@@ -179,6 +189,9 @@ a:hover {
   font-size: 18px;
 }
 
+/* Endscreen ------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------------- */
+
 .end-screen-container {
   position: relative;
   background-color: #FFF0D2;
@@ -186,12 +199,34 @@ a:hover {
   height: 100vh;
 }
 
+.evaluation {
+  z-index: 9;
+}
+
+.bg-hill-counter-2 {
+  position: absolute;
+  height: 35%;
+  width: 100vw;
+  bottom: 20%;
+  left: 0;
+  z-index: 9;
+}
+
+.square {
+  position: absolute;
+  width: 100vw;
+  height: 21%;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background: #304120;
+}
+
 .success {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 .play-again-button {
@@ -206,6 +241,7 @@ a:hover {
   height: 3.5rem;
   padding: 0 2.5rem;
   color: white;
+  z-index: inherit;
 }
 
 .share-button {
@@ -220,7 +256,11 @@ a:hover {
   height: 3.5rem;
   padding: 0 2.5rem;
   color: white;
+  z-index: inherit;
 }
+
+/* Infoscreen ----------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
 
 .info-screen-container {
   position: relative;
@@ -228,7 +268,7 @@ a:hover {
   height: calc(100vh - 32px);
   padding: 16px;
   text-align: left;
-  color: white; 
+  color: white;
 }
 
 .info-icon {
