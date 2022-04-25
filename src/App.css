@@ -148,10 +148,14 @@ a:hover {
   padding-bottom: 8px;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
 .asset-tree {
   position: absolute;
   bottom: 470px;
-  left: 50%;
 }
 
 .plus-button {
@@ -234,7 +238,7 @@ a:hover {
   height: calc(100vh - 32px);
   padding: 16px;
   text-align: left;
-  color: white; 
+  color: white;
 }
 
 .info-icon {

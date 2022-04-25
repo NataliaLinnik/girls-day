@@ -8,8 +8,9 @@ function GameScreen({ counter, setCounter }) {
 
   const buttonClicked = () => {
     setCounter(counter + 1);
-    setHeight(height + (counter))
-    setWidth(width + (counter))
+    // TODO: Abfrage auf maximale Höhe und Breite
+    setHeight(height + (counter * 0,2))
+    setWidth(width + (counter * 0,2))
   }
 
   return (
@@ -45,11 +46,13 @@ function GameScreen({ counter, setCounter }) {
             src="/images/bg-leaves.svg"
             alt="Three leaves"
           />
-          <img
-            className="asset-tree"
-            src="/images/tree.svg"
-            style={{ width, height }}
-          />
+          <div className='image-container'>
+            <img
+              className="asset-tree"
+              src="/images/tree.svg"
+              style={{ width, height, alignSelf: 'center' }}
+            />
+          </div>
           <CountDownTimer
             value={15}
             showText
