@@ -41,11 +41,6 @@ function GameScreen({ counter, setCounter }) {
 
       {startGame && (
         <>
-          <img
-            className="bg-leaves"
-            src="/images/bg-leaves.svg"
-            alt="Three leaves"
-          />
           <div className='image-container'>
             <img
               className="asset-tree"
