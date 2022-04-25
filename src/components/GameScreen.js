@@ -45,6 +45,7 @@ function GameScreen({ counter, setCounter }) {
             <img
               className="asset-tree"
               src="/images/assets/tree.svg"
+              alt="asset"
               style={{ width, height }}
             />
           </div>
