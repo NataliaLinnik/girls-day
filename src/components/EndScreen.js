@@ -1,6 +1,6 @@
 import InfoIcon from './InfoIcon';
 
-function EndScreen({ counter, setShowInfoPage, setShowEndScreen, setCounter, setIsGameRunning}) {
+function EndScreen({ counter, setShowInfoPage}) {
   return (
     <div className="end-screen-container">
       <InfoIcon setShowInfoPage={setShowInfoPage} />
@@ -14,7 +14,7 @@ function EndScreen({ counter, setShowInfoPage, setShowEndScreen, setCounter, set
       <div className="success">Gut gemacht!</div>
       <div className="successDescription">Dein Baum ist um {counter} cm gewachsen. Das entspricht einer Spende von</div>
       <div className="successPrice"> {counter / 10} EUR</div>
-      <button className="play-again-button" onClick={ () => {setShowEndScreen(false); setCounter(0); setIsGameRunning(false);}}>Nochmal spielen</button>
+      <button className="play-again-button" onClick={ () => {window.location.reload()}}>Nochmal spielen</button>
       <button className="share-button">Ergebnis teilen</button>
     </div>
   );
