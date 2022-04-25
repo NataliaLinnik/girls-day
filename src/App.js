@@ -23,7 +23,6 @@ function App() {
     if (isGameRunning) {
       return <GameScreen counter={counter} setCounter={setCounter}/>;
     } else if (showEndScreen) {
-      // TODO: Counter to be moved from Gamescreen (Minh)
       return <EndScreen counter={counter} />;
     } else {
       return <StartScreen setIsGameRunning={setIsGameRunning} />;

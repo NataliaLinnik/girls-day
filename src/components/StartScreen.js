@@ -13,8 +13,8 @@ function StartScreen({ setIsGameRunning }) {
       />
 
       <div className="start-screen-textbox">
-        <h3>Lorem Ipsum<br />dolor sit amet</h3>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <h3>Mehr Grün für<br />deine Stadt!</h3>
+        <p>Lasse deine Pflanze wachsen! <br /> Je größer, desto mehr Geld wird später <br /> gespendet.</p>
         <button className="start-button" onClick={() => setIsGameRunning(true)}>
           Starten
         </button>

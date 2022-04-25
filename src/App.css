@@ -85,6 +85,12 @@ p {
   padding: 0 0.5rem;
 }
 
+.asset-tree {
+  position: absolute;
+  bottom: 470px;
+  left: 50%;
+}
+
 .plus-button {
   position: absolute;
   bottom: 25%;

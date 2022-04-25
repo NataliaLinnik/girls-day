@@ -1,8 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 function GameScreen({ counter, setCounter }) {
+  const [height, setHeight] = useState(150);
+  const [width, setWidth] = useState(150);
+
   const buttonClicked = () => {
     setCounter(counter + 1);
+    setHeight(height + (counter))
+    setWidth(width + (counter))
   }
 
   return (
@@ -17,18 +22,23 @@ function GameScreen({ counter, setCounter }) {
         src="/images/bg-leaves.svg"
         alt="Three leaves"
       />
+      <img
+        className="asset-tree"
+        src="/images/tree.svg"
+        style={{width, height}}
+      />
       <CountDownTimer />
       <div>
-      <div className='counter'>{counter}
-        <br /> CLICKS
+        <div className='counter'>{counter}
+          <br /> CLICKS
+        </div>
+        <button className="plus-button" onClick={buttonClicked}>
+          <img
+            src="/images/plus-icon.svg"
+            alt="Plus Icon"
+          />
+        </button>
       </div>
-      <button className="plus-button" onClick={buttonClicked}>
-        <img
-          src="/images/plus-icon.svg"
-          alt="Plus Icon"
-        />
-      </button>
-    </div>
     </div>
   );
 }
