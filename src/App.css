@@ -1,8 +1,12 @@
-h3 {
+h1 {
   font-family: "Roboto-Medium";
   font-size: 40px;
   line-height: 46.88px;
   color: white;
+}
+
+h3 {
+  margin: 4px 0;
 }
 
 p {
@@ -12,8 +16,17 @@ p {
   color: white;
 }
 
+a {
+  color: white;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
 .App {
   text-align: center;
+  position: relative;
 }
 
 .start-screen-container {
@@ -207,4 +220,50 @@ p {
   height: 3.5rem;
   padding: 0 2.5rem;
   color: white;
+}
+
+.info-screen-container {
+  position: relative;
+  background-color: #304120;
+  height: calc(100vh - 32px);
+  padding: 16px;
+  text-align: left;
+  color: white; 
+}
+
+.info-icon {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  height: 32px;
+  padding: 8px;
+  z-index: 10;
+}
+
+.close-icon {
+  height: 24px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 8px;
+  z-index: 10;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 20px;
+
+  margin-bottom: 40px;
+}
+
+.website-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.website-description {
+  margin-bottom: 8px;
 }
