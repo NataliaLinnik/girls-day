@@ -1,6 +1,8 @@
+import FlowerMeadow from './FlowerMeadow';
 import InfoIcon from './InfoIcon';
 
-function EndScreen({ counter, setShowInfoPage }) {
+function EndScreen({ setShowInfoPage, flowers }) {
+
   return (
     <div className="end-screen-container">
       <InfoIcon setShowInfoPage={setShowInfoPage} />
@@ -9,7 +11,8 @@ function EndScreen({ counter, setShowInfoPage }) {
         <img className="bg-hill-counter-2" src="/images/bg-hill-counter.svg" alt="A small hill" />
         <div className="square" />
       </div>
-      {/* <div>{counter}</div> */}
+
+      <FlowerMeadow flowers={flowers} />
       <div className="success">Gut gemacht!</div>
       <div className="evaluation">
         <button className="play-again-button">Nochmal spielen</button>

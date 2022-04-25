@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { Flower } from '../models/Flower';
 import CountDownTimer from './CountDownTimer';
+import FlowerMeadow from './FlowerMeadow';
 
-function GameScreen({ counter, setCounter }) {
+function GameScreen({ counter, setCounter, flowers }) {
   const [startGame, setStartGame] = useState(false);
-  const [flowers] = useState([]);
 
   const buttonClicked = () => {
     setCounter(counter + 1);
@@ -79,39 +80,3 @@ function GameScreen({ counter, setCounter }) {
 }
 
 export default GameScreen;
-
-function FlowerMeadow({ flowers }) {
-
-  const flowerStyle = (positionX, positionY, height) => ({
-    position: `absolute`,
-    left: positionX + "%",
-    top: positionY + "%",
-    height: height,
-  });
-
-  return (
-    <div className="flower-meadow">
-      <div>
-        {flowers.map((flower) => {
-          return (
-            <img src={flower.asset} key={flower.key} style={flowerStyle(
-              flower.positionX,
-              flower.positionY,
-              flower.height
-            )} />
-          )
-        })}</div>
-    </div>
-  );
-}
-
-
-export class Flower {
-  constructor(key, asset, positionX, positionY, height) {
-    this.key = key;
-    this.asset = asset;
-    this.positionX = positionX;
-    this.positionY = positionY;
-    this.height = height;
-  }
-}
