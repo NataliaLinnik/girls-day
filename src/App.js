@@ -17,7 +17,7 @@ function App() {
       setInterval(() => {
         setIsGameRunning(false);
         setShowEndScreen(true);
-      }, 15000);
+      }, 20000);
     }
   }, [isGameRunning]);
 
