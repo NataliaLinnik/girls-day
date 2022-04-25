@@ -9,13 +9,23 @@ function EndScreen({ counter, setShowInfoPage }) {
         <img className="bg-hill-counter-2" src="/images/bg-hill-counter.svg" alt="A small hill" />
         <div className="square" />
       </div>
-      <div>{counter}</div>
       <div className="success">Gut gemacht!</div>
       <div className="evaluation">
-        <button className="play-again-button">Nochmal spielen</button>
+        <div className="success-description">
+          Dein Baum ist um {counter} cm gewachsen. Das entspricht einer Spende von
+        </div>
+        <div className="success-price"> {counter / 10} EUR</div>
+        <button
+          className="play-again-button"
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
+          Nochmal spielen
+        </button>
         <button className="share-button">Ergebnis teilen</button>
       </div>
-    </div >
+    </div>
   );
 }
 
