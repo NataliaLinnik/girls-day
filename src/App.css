@@ -23,22 +23,28 @@ p {
   height: 100vh;
 }
 
+.start-screen-background {
+  position: absolute;
+  height: 70%;
+  width: 100vw;
+  bottom: 0;
+}
+
 .bg-hills {
   position: absolute;
-  object-fit: fill;
-  width: inherit;
-  height: 639px;
+  height: 100%;
+  width: 100vw;
   bottom: 0;
   left: 0;
 }
 
-.bg-leaves {
+.bg-leaves-1 {
   position: absolute;
-  object-fit: fill;
-  width: 40%;
-  height: 60px;
-  bottom: 470px;
-  left: 0;
+  bottom: 80%;
+  top: 15%;
+  left: 17%;
+  width: 20%;
+  height: 50px;
 }
 
 .start-screen-textbox {
