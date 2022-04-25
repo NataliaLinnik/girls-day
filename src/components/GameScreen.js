@@ -9,8 +9,8 @@ function GameScreen({ counter, setCounter }) {
   const buttonClicked = () => {
     setCounter(counter + 1);
     // TODO: Abfrage auf maximale Höhe und Breite
-    setHeight(height + (counter * 0,2))
-    setWidth(width + (counter * 0,2))
+    setHeight(height + (counter * 0, 2))
+    setWidth(width + (counter * 0, 2))
   }
 
   return (
@@ -49,8 +49,8 @@ function GameScreen({ counter, setCounter }) {
           <div className='image-container'>
             <img
               className="asset-tree"
-              src="/images/tree.svg"
-              style={{ width, height, alignSelf: 'center' }}
+              src="/images/assets/tree.svg"
+              style={{ width, height }}
             />
           </div>
           <CountDownTimer
