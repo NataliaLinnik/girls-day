@@ -29,6 +29,9 @@ a:hover {
   position: relative;
 }
 
+/* Startscreen ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
 .start-screen-container {
   position: relative;
   background-image: linear-gradient(#D2F3ED, #FFF0D2, #FFF0D2);
@@ -144,7 +147,6 @@ a:hover {
   border: none;
 }
 
-
 .start-screen-textbox {
   position: absolute;
   margin-left: auto;
@@ -168,9 +170,12 @@ a:hover {
   color: white;
 }
 
+/* Gamescreen ----------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
 .game-screen-container {
   position: relative;
-  background-color: #FFF0D2;
+  background-image: linear-gradient(#D2F3ED, #FFF0D2, #FFF0D2);
   width: 100vw;
   height: 100vh;
 }
@@ -201,6 +206,7 @@ a:hover {
   padding: 1.2rem;
   color: #30411F;
   font-size: 40px;
+  z-index: 9;
 }
 
 .hint-before-game {
@@ -228,6 +234,22 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
+.game-end-screen-background {
+  position: absolute;
+  height: 83%;
+  width: 100vw;
+  bottom: 0;
+}
+
+.bg-hill-counter {
+  position: absolute;
+  height: 35%;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+
 .countdown-text {
   font-size: 14px;
   padding-bottom: 8px;
@@ -253,6 +275,7 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #E3E8B3;
+  z-index: 9;
 }
 
 .counter {
@@ -264,11 +287,46 @@ a:hover {
   font-size: 18px;
 }
 
+.flower-meadow {
+  position: absolute;
+  height: 52%;
+  width: 100vw;
+  bottom: 30%;
+  left: 0;
+  z-index: 8;
+}
+
+/* Endscreen ------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------------- */
+
 .end-screen-container {
   position: relative;
-  background-color: #FFF0D2;
+  background-image: linear-gradient(#D2F3ED, #FFF0D2, #FFF0D2);
   width: 100vw;
   height: 100vh;
+}
+
+.evaluation {
+  z-index: 9;
+}
+
+.bg-hill-counter-2 {
+  position: absolute;
+  height: 35%;
+  width: 100vw;
+  bottom: 20%;
+  left: 0;
+  z-index: 9;
+}
+
+.square {
+  position: absolute;
+  width: 100vw;
+  height: 21%;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background: #304120;
 }
 
 .success {
@@ -291,6 +349,7 @@ a:hover {
   height: 3.5rem;
   padding: 0 2.5rem;
   color: white;
+  z-index: inherit;
 }
 
 .share-button {
@@ -305,7 +364,11 @@ a:hover {
   height: 3.5rem;
   padding: 0 2.5rem;
   color: white;
+  z-index: inherit;
 }
+
+/* Infoscreen ----------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
 
 .info-screen-container {
   position: relative;
