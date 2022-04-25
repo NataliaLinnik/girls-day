@@ -27,7 +27,7 @@ function App() {
     if (showInfoPage) {
       return <InfoScreen setShowInfoPage={setShowInfoPage} />;
     } else if (isGameRunning) {
-      return <GameScreen counter={counter} setCounter={setCounter} height={height} setHeight={setHeight} width={width} setWidth={setWidth}/>;
+      return <GameScreen counter={counter} setCounter={setCounter} height={height} setHeight={setHeight} width={width} setWidth={setWidth} />;
     } else if (showEndScreen) {
       return <EndScreen counter={counter} height={height} width={width} setShowInfoPage={setShowInfoPage} />;
     } else {

@@ -5,17 +5,20 @@ function EndScreen({ counter, setShowInfoPage, width, height }) {
     <div className="end-screen-container">
       <InfoIcon setShowInfoPage={setShowInfoPage} />
       <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
-      <div className='image-container'>
-            <img
-              className="asset-tree"
-              src="/images/assets/tree.svg"
-              alt="asset"
-              style={{ width, height }}
-            />
-          </div>
-      <div>{counter}</div>
+
       <div className="success">Gut gemacht!</div>
-      <button className="play-again-button">Nochmal spielen</button>
+      <div className="success-description">
+        Dein Baum ist um {counter} cm gewachsen. Das entspricht einer Spende von
+      </div>
+      <div className="success-price"> {counter / 10} EUR</div>
+      <button
+        className="play-again-button"
+        onClick={() => {
+          window.location.reload();
+        }}
+      >
+        Nochmal spielen
+      </button>
       <button className="share-button">Ergebnis teilen</button>
     </div>
   );

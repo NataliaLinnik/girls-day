@@ -197,39 +197,66 @@ a:hover {
 }
 
 .success {
+  width: 100%;
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+  font-family: "Roboto-Light";
+  font-size: 32px;
+  line-height: 32px;
+  color: #263238;
 }
 
-.play-again-button {
+.success-description {
+  width: 100%;
   position: absolute;
-  bottom: 20%;
+  bottom: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+  color: white;
+  font-family: "Roboto-Light";
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.success-price {
+  position: absolute;
+  bottom: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-family: "Roboto-Light";
+  font-size: 40px;
+  line-height: 32px;
+}
+
+.play-again-button,
+.share-button {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "Roboto-Medium";
+  font-size: 16px;
   background-color: transparent;
   border: 1px solid white;
-  border-radius: 3.5rem;
-  height: 3.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
   padding: 0 2.5rem;
+  width: 60%;
   color: white;
 }
 
 .share-button {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 4%;
 
   background-color: #8FB062;
   border: none;
-  border-radius: 3.5rem;
-  height: 3.5rem;
-  padding: 0 2.5rem;
-  color: white;
 }
 
 .info-screen-container {
