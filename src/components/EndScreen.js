@@ -7,10 +7,8 @@ function EndScreen({ counter, setShowInfoPage, width, height }) {
       <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
 
       <div className="success">Gut gemacht!</div>
-      <div className="success-description">
-        Dein Baum ist um {counter} cm gewachsen. Das entspricht einer Spende von
-      </div>
-      <div className="success-price"> {counter / 10} EUR</div>
+      <div className="success-description">Klasse! Du hast {counter} Klicks geschafft. Dein Baum ist um {height - 150} cm gewachsen. Das entspricht einer Spende von</div>
+      <div className="success-price"> {(height - 150) / 10} EUR</div>
       <button
         className="play-again-button"
         onClick={() => {
