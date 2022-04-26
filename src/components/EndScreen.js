@@ -1,7 +1,7 @@
 import FlowerMeadow from './FlowerMeadow';
 import InfoIcon from './InfoIcon';
 
-function EndScreen({ setShowInfoPage, flowers }) {
+function EndScreen({ counter, setShowInfoPage, flowers }) {
 
   return (
     <div className="end-screen-container">
@@ -15,7 +15,18 @@ function EndScreen({ setShowInfoPage, flowers }) {
       <FlowerMeadow flowers={flowers} />
       <div className="success">Gut gemacht!</div>
       <div className="evaluation">
-        <button className="play-again-button">Nochmal spielen</button>
+        <div className="success-description">
+          Dein Baum ist um {counter} cm gewachsen. Das entspricht einer Spende von
+        </div>
+        <div className="success-price"> {counter / 10} EUR</div>
+        <button
+          className="play-again-button"
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
+          Nochmal spielen
+        </button>
         <button className="share-button">Ergebnis teilen</button>
       </div>
     </div>
