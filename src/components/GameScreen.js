@@ -7,8 +7,8 @@ function GameScreen({ counter, setCounter, height, setHeight, width, setWidth })
   const buttonClicked = () => {
     setCounter(counter + 1);
     // TODO: Abfrage auf maximale Höhe und Breite
-    setHeight(height + (counter * 0.05))
-    setWidth(width + (counter * 0.05))
+    setHeight(height + (counter * 0.02))
+    setWidth(width + (counter * 0.02))
   }
 
   return (
@@ -37,7 +37,7 @@ function GameScreen({ counter, setCounter, height, setHeight, width, setWidth })
       )}
 
       <div className='game-end-screen-background'>
-        <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
+        <img className="bg-hill-light-green" src="/images/bg-hill-light-green.svg" alt="Light green hill" />
         <img className="bg-hill-counter" src="/images/bg-hill-counter.svg" alt="A small hill" />
       </div>
 

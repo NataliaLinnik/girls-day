@@ -172,6 +172,15 @@ a:hover {
   bottom: 0;
 }
 
+.bg-hill-light-green {
+  position: absolute;
+  height: 60%;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
 .bg-hill-counter {
   position: absolute;
   height: 35%;
@@ -193,7 +202,7 @@ a:hover {
 
 .asset-tree {
   position: absolute;
-  bottom: 470px;
+  bottom: 29%;
 }
 
 .plus-button {
@@ -246,7 +255,7 @@ a:hover {
   position: absolute;
   height: 35%;
   width: 100vw;
-  bottom: 20%;
+  bottom: 10%;
   left: 0;
   z-index: 9;
 }
@@ -261,10 +270,15 @@ a:hover {
   background: #304120;
 }
 
+.asset-tree-2 {
+  position: absolute;
+  bottom: 44%;
+}
+
 .success {
   width: 100%;
   position: absolute;
-  top: 10%;
+  top: 6%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Roboto-Light";
@@ -274,9 +288,9 @@ a:hover {
 }
 
 .success-description {
-  width: 100%;
+  width: 95%;
   position: absolute;
-  bottom: 30%;
+  bottom: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -288,20 +302,20 @@ a:hover {
 
 .success-price {
   position: absolute;
-  bottom: 22%;
+  bottom: 13%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: inherit;
   color: white;
   font-family: "Roboto-Light";
-  font-size: 40px;
+  font-size: 36px;
   line-height: 32px;
 }
 
 .play-again-button,
 .share-button {
   position: absolute;
-  bottom: 12%;
+  bottom: 3%;
   left: 50%;
   transform: translate(-50%, -50%);
 
