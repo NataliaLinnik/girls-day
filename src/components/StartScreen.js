@@ -7,14 +7,13 @@ function StartScreen({ setIsGameRunning, setShowInfoPage }) {
       <StartScreenBackground />
       <div className="start-screen-textbox">
         <h1>
-          Lorem Ipsum
+          Mehr Bienen
           <br />
-          dolor sit amet
+          für deine Stadt!
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
+          Lasse deine Pflanzen wachsen!<br />
+          Je mehr, desto mehr Geld wird später gespendet.
         </p>
         <button className="start-button" onClick={() => setIsGameRunning(true)}>
           Starten
