@@ -16,7 +16,8 @@ function EndScreen({ counter, setShowInfoPage, flowers }) {
       <div className="success">Gut gemacht!</div>
       <div className="evaluation">
         <div className="success-description">
-          Dein Baum ist um {counter} cm gewachsen. Das entspricht einer Spende von
+          Du hast {counter} Blumen gepflanzt.
+          Das entspricht einer Spende von
         </div>
         <div className="success-price"> {counter / 10} EUR</div>
         <button
