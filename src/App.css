@@ -53,11 +53,26 @@ a:hover {
 
 .bg-leaves-1 {
   position: absolute;
-  bottom: 80%;
-  top: 15%;
-  left: 17%;
-  width: 20%;
-  height: 50px;
+  bottom: 73%;
+  left: 10%;
+}
+
+.bg-tree-big {
+  position: absolute;
+  bottom: 70%;
+  left: 4%;
+}
+
+.bg-tree-middle {
+  position: absolute;
+  bottom: 79%;
+  left: 42%;
+}
+
+.bg-tree-small {
+  position: absolute;
+  bottom: 78%;
+  left: 73%;
 }
 
 .start-screen-textbox {

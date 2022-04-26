@@ -33,6 +33,9 @@ function StartScreenBackground() {
         src="/images/bg-leaves.svg"
         alt="Three leaves"
       />
+      <img className="bg-tree-big" src="/images/tree-big.svg" alt="Tree big" />
+      <img className="bg-tree-middle" src="/images/tree-middle.svg" alt="Tree middle" />
+      <img className="bg-tree-small" src="/images/tree-small.svg" alt="Tree small" />
     </div>
   );
 }
