@@ -1,19 +1,23 @@
+import FlowerMeadow from './FlowerMeadow';
 import InfoIcon from './InfoIcon';
 
-function EndScreen({ counter, setShowInfoPage }) {
+function EndScreen({ setShowInfoPage, flowers }) {
+
   return (
     <div className="end-screen-container">
       <InfoIcon setShowInfoPage={setShowInfoPage} />
-      <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
-      <img
-        className="bg-leaves"
-        src="/images/bg-leaves.svg"
-        alt="Three leaves"
-      />
-      <div>{counter}</div>
+      <div className="game-end-screen-background">
+        <img className="bg-hills" src="/images/bg-hills-game.svg" alt="Green hills" />
+        <img className="bg-hill-counter-2" src="/images/bg-hill-counter.svg" alt="A small hill" />
+        <div className="square" />
+      </div>
+
+      <FlowerMeadow flowers={flowers} />
       <div className="success">Gut gemacht!</div>
-      <button className="play-again-button">Nochmal spielen</button>
-      <button className="share-button">Ergebnis teilen</button>
+      <div className="evaluation">
+        <button className="play-again-button">Nochmal spielen</button>
+        <button className="share-button">Ergebnis teilen</button>
+      </div>
     </div>
   );
 }
