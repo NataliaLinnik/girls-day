@@ -29,6 +29,9 @@ a:hover {
   position: relative;
 }
 
+/* Startscreen ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
 .start-screen-container {
   position: relative;
   background-color: #FFF0D2;
@@ -53,11 +56,26 @@ a:hover {
 
 .bg-leaves-1 {
   position: absolute;
-  bottom: 80%;
-  top: 15%;
-  left: 17%;
-  width: 20%;
-  height: 50px;
+  bottom: 73%;
+  left: 10%;
+}
+
+.bg-tree-big {
+  position: absolute;
+  bottom: 70%;
+  left: 4%;
+}
+
+.bg-tree-middle {
+  position: absolute;
+  bottom: 79%;
+  left: 42%;
+}
+
+.bg-tree-small {
+  position: absolute;
+  bottom: 78%;
+  left: 73%;
 }
 
 .start-screen-textbox {
@@ -65,7 +83,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  bottom: 80px;
+  bottom: 60px;
   left: 0;
   right: 0;
   max-height: 639px;
@@ -82,6 +100,9 @@ a:hover {
   padding: 0 2.5rem;
   color: white;
 }
+
+/* Gamescreen ----------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
 
 .game-screen-container {
   position: relative;
@@ -116,6 +137,7 @@ a:hover {
   padding: 1.2rem;
   color: #30411F;
   font-size: 40px;
+  z-index: 9;
 }
 
 .hint-before-game {
@@ -143,6 +165,31 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
+.game-end-screen-background {
+  position: absolute;
+  height: 83%;
+  width: 100vw;
+  bottom: 0;
+}
+
+.bg-hill-light-green {
+  position: absolute;
+  height: 60%;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
+.bg-hill-counter {
+  position: absolute;
+  height: 35%;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+
 .countdown-text {
   font-size: 14px;
   padding-bottom: 8px;
@@ -155,7 +202,7 @@ a:hover {
 
 .asset-tree {
   position: absolute;
-  bottom: 470px;
+  bottom: 29%;
 }
 
 .plus-button {
@@ -178,6 +225,7 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #E3E8B3;
+  z-index: 9;
 }
 
 .counter {
@@ -189,6 +237,9 @@ a:hover {
   font-size: 18px;
 }
 
+/* Endscreen ------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------------- */
+
 .end-screen-container {
   position: relative;
   background-color: #FFF0D2;
@@ -196,41 +247,98 @@ a:hover {
   height: 100vh;
 }
 
-.success {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+.evaluation {
+  z-index: 9;
 }
 
-.play-again-button {
+.bg-hill-counter-2 {
+  position: absolute;
+  height: 35%;
+  width: 100vw;
+  bottom: 10%;
+  left: 0;
+  z-index: 9;
+}
+
+.square {
+  position: absolute;
+  width: 100vw;
+  height: 21%;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background: #304120;
+}
+
+.asset-tree-2 {
+  position: absolute;
+  bottom: 44%;
+}
+
+.success {
+  width: 100%;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto-Light";
+  font-size: 32px;
+  line-height: 32px;
+  color: #263238;
+}
+
+.success-description {
+  width: 95%;
   position: absolute;
   bottom: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 3.5rem;
-  height: 3.5rem;
-  padding: 0 2.5rem;
   color: white;
+  z-index: inherit;
+  font-family: "Roboto-Light";
+  font-size: 18px;
+  line-height: 20px;
 }
 
+.success-price {
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: inherit;
+  color: white;
+  font-family: "Roboto-Light";
+  font-size: 36px;
+  line-height: 32px;
+}
+
+.play-again-button,
 .share-button {
   position: absolute;
-  bottom: 5%;
+  bottom: 3%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+  font-family: "Roboto-Medium";
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  padding: 0 2.5rem;
+  width: 60%;
+  color: white;
+  z-index: inherit;
+}
+
+.share-button {
+  bottom: 4%;
   background-color: #8FB062;
   border: none;
-  border-radius: 3.5rem;
-  height: 3.5rem;
-  padding: 0 2.5rem;
-  color: white;
 }
+
+/* Infoscreen ----------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
 
 .info-screen-container {
   position: relative;

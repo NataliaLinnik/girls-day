@@ -7,14 +7,14 @@ function StartScreen({ setIsGameRunning, setShowInfoPage }) {
       <StartScreenBackground />
       <div className="start-screen-textbox">
         <h1>
-          Lorem Ipsum
+          Mehr Grün für
           <br />
-          dolor sit amet
+          deine Stadt!
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
+          Lasse deine Pflanze wachsen!
+          <br />
+          Je größer, desto mehr Geld wird später gespendet.
         </p>
         <button className="start-button" onClick={() => setIsGameRunning(true)}>
           Starten
@@ -33,6 +33,9 @@ function StartScreenBackground() {
         src="/images/bg-leaves.svg"
         alt="Three leaves"
       />
+      <img className="bg-tree-big" src="/images/tree-big.svg" alt="Tree big" />
+      <img className="bg-tree-middle" src="/images/tree-middle.svg" alt="Tree middle" />
+      <img className="bg-tree-small" src="/images/tree-small.svg" alt="Tree small" />
     </div>
   );
 }
