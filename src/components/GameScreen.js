@@ -35,7 +35,11 @@ function GameScreen({ counter, setCounter, height, setHeight, width, setWidth })
           />
         </div>
       )}
-      <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
+
+      <div className='game-end-screen-background'>
+        <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
+        <img className="bg-hill-counter" src="/images/bg-hill-counter.svg" alt="A small hill" />
+      </div>
 
       {startGame && (
         <>
