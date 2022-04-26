@@ -32,15 +32,14 @@ function GameScreen({ counter, setCounter }) {
           />
         </div>
       )}
-      <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
+
+      <div className='game-end-screen-background'>
+        <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
+        <img className="bg-hill-counter" src="/images/bg-hill-counter.svg" alt="A small hill" />
+      </div>
 
       {startGame && (
         <>
-          <img
-            className="bg-leaves"
-            src="/images/bg-leaves.svg"
-            alt="Three leaves"
-          />
           <CountDownTimer
             value={15}
             showText

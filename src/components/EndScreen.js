@@ -4,22 +4,27 @@ function EndScreen({ counter, setShowInfoPage }) {
   return (
     <div className="end-screen-container">
       <InfoIcon setShowInfoPage={setShowInfoPage} />
-      <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
-
-      <div className="success">Gut gemacht!</div>
-      <div className="success-description">
-        Dein Baum ist um {counter} cm gewachsen. Das entspricht einer Spende von
+      <div className="game-end-screen-background">
+        <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
+        <img className="bg-hill-counter-2" src="/images/bg-hill-counter.svg" alt="A small hill" />
+        <div className="square" />
       </div>
-      <div className="success-price"> {counter / 10} EUR</div>
-      <button
-        className="play-again-button"
-        onClick={() => {
-          window.location.reload();
-        }}
-      >
-        Nochmal spielen
-      </button>
-      <button className="share-button">Ergebnis teilen</button>
+      <div className="success">Gut gemacht!</div>
+      <div className="evaluation">
+        <div className="success-description">
+          Dein Baum ist um {counter} cm gewachsen. Das entspricht einer Spende von
+        </div>
+        <div className="success-price"> {counter / 10} EUR</div>
+        <button
+          className="play-again-button"
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
+          Nochmal spielen
+        </button>
+        <button className="share-button">Ergebnis teilen</button>
+      </div>
     </div>
   );
 }
