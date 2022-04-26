@@ -2,6 +2,7 @@ import InfoIcon from './InfoIcon';
 
 function EndScreen({ counter, setShowInfoPage, width, height }) {
   const donation = ((height - 150) / 10).toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
+  const heightDifference = (height - 150).toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
 
   return (
     <div className="end-screen-container">
@@ -16,7 +17,7 @@ function EndScreen({ counter, setShowInfoPage, width, height }) {
         />
       </div>
       <div className="success">Gut gemacht!</div>
-      <div className="success-description">Klasse! Du hast {counter} Klicks geschafft. Dein Baum ist um {height - 150} cm gewachsen. Das entspricht einer Spende von</div>
+      <div className="success-description">Klasse! Du hast {counter} Klicks geschafft. Dein Baum ist um {heightDifference} cm gewachsen. Das entspricht einer Spende von</div>
       <div className="success-price"> {donation} EUR</div>
       <button
         className="play-again-button"
