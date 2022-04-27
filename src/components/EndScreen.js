@@ -13,7 +13,8 @@ function EndScreen({ counter, setShowInfoPage, flowers }) {
       </div>
 
       <FlowerMeadow flowers={flowers} />
-      <div className="success">Gut gemacht!</div>
+      {counter > 0 && <div className="success">Gut gemacht!</div>}
+      {counter === 0 && <div className="success">Schade...</div>}
       <div className="evaluation">
         <div className="success-description">
           Du hast {counter} Blumen gepflanzt.

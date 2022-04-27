@@ -163,12 +163,13 @@ a:hover {
 
 .start-button {
   margin-top: 20px;
-  background-color: #8FB062;
+  /* #8FB062 */
+  background-color: red; 
   border: none;
   border-radius: 3.5rem;
   height: 3.5rem;
   padding: 0 2.5rem;
-  color: white;
+  color: red;
 }
 
 /* Gamescreen ----------------------------------------------------------------------- */
@@ -205,7 +206,7 @@ a:hover {
 
   background-color: white;
   border: none;
-  border-radius: 100%;
+  border-radius: 5px;
   /* Entfernen für Bug */
   padding: 1.2rem;
   color: #30411F;
@@ -279,7 +280,7 @@ a:hover {
 }
 
 .clicks-text {
-  font-size: 18px;
+  font-size: 8px;
 }
 
 .flower-meadow {

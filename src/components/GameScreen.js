@@ -3,7 +3,7 @@ import { Flower } from '../models/Flower';
 import CountDownTimer from './CountDownTimer';
 import FlowerMeadow from './FlowerMeadow';
 
-function GameScreen({ counter, setCounter, flowers }) {
+function GameScreen({ counter, setCounter, flowers, gameTimeOut }) {
   const [startGame, setStartGame] = useState(false);
 
   const buttonClicked = () => {
@@ -41,13 +41,13 @@ function GameScreen({ counter, setCounter, flowers }) {
           <CountDownTimer
             value={5}
             startTimer
-            timeout={setStartGame}
+            timeout={() => setStartGame(true)}
             counterStyle={'before-game-countdown'}
           />
 
           <img
             className="finger-icon"
-            src="/images/finger-icon.svg"
+            scr="/images/finger-icon.svg"
             alt="icon with a finger clicking on the screen"
           />
         </div>
@@ -66,6 +66,7 @@ function GameScreen({ counter, setCounter, flowers }) {
             showText
             startTimer={startGame}
             counterStyle={'countdown'}
+            timeout={gameTimeOut}
           />
           <div>
             <div className="counter-container">

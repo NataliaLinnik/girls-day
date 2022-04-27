@@ -25,9 +25,9 @@ function CountDownTimer({
   }, [startTimer]);
 
   useEffect(() => {
-    if (timer === 0) {
+    if (timer <= 0) {
       clear();
-      timeout(true);
+      timeout();
     }
   }, [timer, timeout]);
 

@@ -6,7 +6,6 @@ import StartScreen from './components/StartScreen';
 import InfoScreen from './components/InfoScreen';
 
 function App() {
-
   const [isGameRunning, setIsGameRunning] = useState(false);
   const [showEndScreen, setShowEndScreen] = useState(false);
   const [showInfoPage, setShowInfoPage] = useState(false);
@@ -14,35 +13,29 @@ function App() {
   const [flowers] = useState([]);
 
   useEffect(() => {
-
     window.addEventListener('resize', () => {
       setHeight();
     });
 
     return () => {
       window.removeEventListener('resize', window);
-    }
+    };
   });
 
   useEffect(() => {
     setHeight();
   }, []);
 
-  // Hides GameScreen after 15sec
-  useEffect(() => {
-    if (isGameRunning) {
-      setInterval(() => {
-        setIsGameRunning(false);
-        setShowEndScreen(true);
-      }, 20000);
-    }
-  }, [isGameRunning]);
+  const gameTimeOut = () => {
+    setIsGameRunning(false);
+    setShowEndScreen(true);
+  };
 
   const showPage = () => {
     if (showInfoPage) {
       return <InfoScreen setShowInfoPage={setShowInfoPage} />;
     } else if (isGameRunning) {
-      return <GameScreen counter={counter} setCounter={setCounter} flowers={flowers} />;
+      return <GameScreen counter={counter} setCounter={setCounter} flowers={flowers} gameTimeOut={gameTimeOut} />;
     } else if (showEndScreen) {
       return <EndScreen counter={counter} setShowInfoPage={setShowInfoPage} flowers={flowers} />;
     } else {
