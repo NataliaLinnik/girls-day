@@ -37,6 +37,7 @@ a:hover {
   background-color: #FFF0D2;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .start-screen-background {
@@ -109,6 +110,7 @@ a:hover {
   background-color: #FFF0D2;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .overlay {
@@ -119,6 +121,7 @@ a:hover {
   left: 0;
   right: 0;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.45);
   color: white
@@ -245,6 +248,7 @@ a:hover {
   background-color: #FFF0D2;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .evaluation {
@@ -344,6 +348,7 @@ a:hover {
   position: relative;
   background-color: #304120;
   height: calc(100vh - 32px);
+  height: calc((var(--vh, 1vh) * 100) - 32px);
   padding: 16px;
   text-align: left;
   color: white;
