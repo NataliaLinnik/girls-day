@@ -18,16 +18,16 @@ function CountDownTimer({
   useEffect(() => {
     if (startTimer) {
       id.current = window.setInterval(() => {
-        setTimer(time => time - 1);
+        setTimer(time => time - 2);
       }, 1000);
     }
     return () => clear();
   }, [startTimer]);
 
   useEffect(() => {
-    if (timer === 0) {
+    if (timer <= 0) {
       clear();
-      timeout(true);
+      timeout();
     }
   }, [timer, timeout]);
 

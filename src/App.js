@@ -6,7 +6,6 @@ import StartScreen from './components/StartScreen';
 import InfoScreen from './components/InfoScreen';
 
 function App() {
-
   const [isGameRunning, setIsGameRunning] = useState(false);
   const [showEndScreen, setShowEndScreen] = useState(false);
   const [showInfoPage, setShowInfoPage] = useState(false);
@@ -15,35 +14,39 @@ function App() {
   const [width, setWidth] = useState(150);
 
   useEffect(() => {
-
     window.addEventListener('resize', () => {
       setWindowHeight();
     });
 
     return () => {
       window.removeEventListener('resize', window);
-    }
+    };
   });
 
   useEffect(() => {
     setWindowHeight();
   }, []);
 
-  // Hides GameScreen after 15sec
-  useEffect(() => {
-    if (isGameRunning) {
-      setInterval(() => {
-        setIsGameRunning(false);
-        setShowEndScreen(true);
-      }, 20000);
-    }
-  }, [isGameRunning]);
+  const gameTimeOut = () => {
+    setIsGameRunning(false);
+    setShowEndScreen(true);
+  };
 
   const showPage = () => {
     if (showInfoPage) {
       return <InfoScreen setShowInfoPage={setShowInfoPage} />;
     } else if (isGameRunning) {
-      return <GameScreen counter={counter} setCounter={setCounter} height={height} setHeight={setHeight} width={width} setWidth={setWidth} />;
+      return (
+        <GameScreen
+          counter={counter}
+          setCounter={setCounter}
+          height={height} 
+          setHeight={setHeight} 
+          width={width} 
+          setWidth={setWidth}
+          gameTimeOut={gameTimeOut}
+        />
+      );
     } else if (showEndScreen) {
       return <EndScreen counter={counter} height={height} width={width} setShowInfoPage={setShowInfoPage} />;
     } else {
