@@ -7,8 +7,11 @@ import InfoScreen from './components/InfoScreen';
 
 function App() {
 
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  setHeight();
+
+  window.addEventListener('resize', () => {
+    setHeight();
+  });
 
   const [isGameRunning, setIsGameRunning] = useState(false);
   const [showEndScreen, setShowEndScreen] = useState(false);
@@ -43,6 +46,11 @@ function App() {
   };
 
   return <div className="App">{showPage()}</div>;
+}
+
+function setHeight() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
 export default App;
