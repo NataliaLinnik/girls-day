@@ -14,8 +14,6 @@ function App() {
 
   useEffect(() => {
 
-    setHeight();
-
     window.addEventListener('resize', () => {
       setHeight();
     });
@@ -24,6 +22,10 @@ function App() {
       window.removeEventListener('resize', window);
     }
   });
+
+  useEffect(() => {
+    setHeight();
+  }, []);
 
   // Hides GameScreen after 15sec
   useEffect(() => {
