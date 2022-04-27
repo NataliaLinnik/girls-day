@@ -7,16 +7,23 @@ import InfoScreen from './components/InfoScreen';
 
 function App() {
 
-  setHeight();
-
-  window.addEventListener('resize', () => {
-    setHeight();
-  });
-
   const [isGameRunning, setIsGameRunning] = useState(false);
   const [showEndScreen, setShowEndScreen] = useState(false);
   const [showInfoPage, setShowInfoPage] = useState(false);
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+
+    setHeight();
+
+    window.addEventListener('resize', () => {
+      setHeight();
+    });
+
+    return () => {
+      window.removeEventListener('resize', window);
+    }
+  });
 
   // Hides GameScreen after 15sec
   useEffect(() => {
