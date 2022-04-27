@@ -6,11 +6,27 @@ import StartScreen from './components/StartScreen';
 import InfoScreen from './components/InfoScreen';
 
 function App() {
+
   const [isGameRunning, setIsGameRunning] = useState(false);
   const [showEndScreen, setShowEndScreen] = useState(false);
   const [showInfoPage, setShowInfoPage] = useState(false);
   const [counter, setCounter] = useState(0);
   const [flowers] = useState([]);
+
+  useEffect(() => {
+
+    window.addEventListener('resize', () => {
+      setHeight();
+    });
+
+    return () => {
+      window.removeEventListener('resize', window);
+    }
+  });
+
+  useEffect(() => {
+    setHeight();
+  }, []);
 
   // Hides GameScreen after 15sec
   useEffect(() => {
@@ -40,6 +56,11 @@ function App() {
   };
 
   return <div className="App">{showPage()}</div>;
+}
+
+function setHeight() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
 export default App;
