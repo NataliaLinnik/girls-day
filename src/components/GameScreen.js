@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CountDownTimer from './CountDownTimer';
 
-function GameScreen({ counter, setCounter }) {
+function GameScreen({ counter, setCounter, gameTimeOut }) {
   const [startGame, setStartGame] = useState(false);
 
   const buttonClicked = () => {
@@ -21,7 +21,7 @@ function GameScreen({ counter, setCounter }) {
           <CountDownTimer
             value={5}
             startTimer
-            timeout={setStartGame}
+            timeout={() => setStartGame(true)}
             counterStyle={'before-game-countdown'}
           />
 
@@ -33,9 +33,17 @@ function GameScreen({ counter, setCounter }) {
         </div>
       )}
 
-      <div className='game-end-screen-background'>
-        <img className="bg-hills" src="/images/bg-hills.svg" alt="Green hills" />
-        <img className="bg-hill-counter" src="/images/bg-hill-counter.svg" alt="A small hill" />
+      <div className="game-end-screen-background">
+        <img
+          className="bg-hills"
+          src="/images/bg-hills.svg"
+          alt="Green hills"
+        />
+        <img
+          className="bg-hill-counter"
+          src="/images/bg-hill-counter.svg"
+          alt="A small hill"
+        />
       </div>
 
       {startGame && (
@@ -45,6 +53,7 @@ function GameScreen({ counter, setCounter }) {
             showText
             startTimer={startGame}
             counterStyle={'countdown'}
+            timeout={gameTimeOut}
           />
           <div>
             <div className="counter-container">
