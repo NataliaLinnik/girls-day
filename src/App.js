@@ -6,6 +6,10 @@ import StartScreen from './components/StartScreen';
 import InfoScreen from './components/InfoScreen';
 
 function App() {
+
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
   const [isGameRunning, setIsGameRunning] = useState(false);
   const [showEndScreen, setShowEndScreen] = useState(false);
   const [showInfoPage, setShowInfoPage] = useState(false);
