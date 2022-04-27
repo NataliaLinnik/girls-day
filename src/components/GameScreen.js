@@ -27,7 +27,7 @@ function GameScreen({ counter, setCounter, gameTimeOut }) {
 
           <img
             className="finger-icon"
-            src="/images/finger-icon.svg"
+            scr="/images/finger-icon.svg"
             alt="icon with a finger clicking on the screen"
           />
         </div>
