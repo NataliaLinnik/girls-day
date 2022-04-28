@@ -1,3 +1,7 @@
+import slides from "../slides/GirlsDay_Slides.pdf";
+import ux from "../slides/GirlsDay_UX.pdf";
+import informatik from "../slides/Informatik-Workshop.pdf";
+
 function InfoScreen({ setShowInfoPage }) {
   return (
     <div className="info-screen-container">
@@ -7,34 +11,29 @@ function InfoScreen({ setShowInfoPage }) {
         alt="close this page"
         onClick={() => setShowInfoPage(false)}
       />
-      <h1>Danke für deine Teilnahme am Girls Day!</h1>
+      <h1>Danke für deine Teilnahme am Girls' Day 2022!</h1>
       <h2>Präsentationen:</h2>
       <div className="list-container">
-        <a href="https://www.w3schools.com">
-          Platzhalter_für_die_Präsentation_1
+        <h3 className="headline">Girls' Day bei der Exxeta AG</h3>
+        <a className="link" href={slides} target="_blank" rel="noreferrer">
+          GirlsDay_Slides.pdf
         </a>
-        <a href="https://www.w3schools.com">
+        <h3 className="headline">UX Design Präsentation</h3>
+        <p className="link-description">Hier seht ihr nochmal die Inhalte und Gestaltgesetze, die wir euch vor Ort präsentiert hatten.</p>
+        <a className="link" href={ux} target="_blank" rel="noreferrer">
           Platzhalter_für_die_Präsentation_2
         </a>
-      </div>
-
-      <h2>Interessante Links:</h2>
-      <div className="list-container">
-        <div className="website-container">
-          <h3>Webseite 1</h3>
-          <span className="website-description">Beschreibung Webseite 1</span>
-          <a href="https://www.w3schools.com">Platzhalter_für_den_Link_1</a>
-        </div>
-
-        <div className="website-container">
-          <h3>Webseite 2</h3>
-          <span className="website-description">
-            Beschreibung Webseite 2 etwas länger Praesent sapien massa,
-            convallis a pellentesque nec, egestas non nisi. Vivamus suscipit
-            tortor eget felis porttitor volutpat.
-          </span>
-          <a href="https://www.w3schools.com">Platzhalter_für_den_Link_2</a>
-        </div>
+        <h3 className="headline">Informatik Workshop</h3>
+        <a className="link" href={informatik} target="_blank" rel="noreferrer">
+          Informatik-Workshop.pdf
+        </a>
+        <h4 className="headline">Weiterführende Links</h4>
+        <ul className="link-list">
+          <li><p className="link-description">Erstelle Spiele mit einer visuellen Programmiersprache: <a href="https://scratch.mit.edu">https://scratch.mit.edu</a></p></li>
+          <li>
+            <p className="link-description">CSS Spiel: <a href="https://flexboxfroggy.com/#de">https://flexboxfroggy.com/#de</a></p>
+          </li>
+        </ul>
       </div>
     </div>
   );
