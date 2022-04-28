@@ -18,7 +18,7 @@ function CountDownTimer({
   useEffect(() => {
     if (startTimer) {
       id.current = window.setInterval(() => {
-        setTimer(time => time - 1);
+        setTimer(time => time - 2);
       }, 1000);
     }
     return () => clear();
