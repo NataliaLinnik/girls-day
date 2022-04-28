@@ -7,9 +7,9 @@ function StartScreen({ setIsGameRunning, setShowInfoPage }) {
       <StartScreenBackground />
       <div className="start-screen-textbox">
         <h1>
-          Lorem ipsum
+          Mehr Grün
           <br />
-          dolor sit amet
+          für deine Stadt!
         </h1>
         <p>
           Lasse deine Pflanzen wachsen!<br />
