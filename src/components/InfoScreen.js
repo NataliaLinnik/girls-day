@@ -21,7 +21,7 @@ function InfoScreen({ setShowInfoPage }) {
         <h3 className="headline">UX Design Präsentation</h3>
         <p className="link-description">Hier seht ihr nochmal die Inhalte und Gestaltgesetze, die wir euch vor Ort präsentiert hatten.</p>
         <a className="link" href={ux} target="_blank" rel="noreferrer">
-          Platzhalter_für_die_Präsentation_2
+          GirlsDay_UX.pdf
         </a>
         <h3 className="headline">Informatik Workshop</h3>
         <a className="link" href={informatik} target="_blank" rel="noreferrer">
