@@ -6,7 +6,6 @@ function StartScreen({ setIsGameRunning, setShowInfoPage }) {
       <InfoIcon setShowInfoPage={setShowInfoPage} />
       <StartScreenBackground />
       <div className="start-screen-textbox">
-        {/* 
         <h1>
           Mehr Grün für
           <br />
@@ -17,17 +16,7 @@ function StartScreen({ setIsGameRunning, setShowInfoPage }) {
           <br />
           Je größer, desto mehr Geld wird später gespendet.
         </p>
-        */}
-        <h1>
-          Lorem Ipsum
-          <br />
-          dolor sit amet
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
-        </p>
+
         <button className="start-button" onClick={() => setIsGameRunning(true)}>
           Starten
         </button>
@@ -46,8 +35,16 @@ function StartScreenBackground() {
         alt="Three leaves"
       />
       <img className="bg-tree-big" src="/images/tree-big.svg" alt="Tree big" />
-      <img className="bg-tree-middle" src="/images/tree-middle.svg" alt="Tree middle" />
-      <img className="bg-tree-small" src="/images/tree-small.svg" alt="Tree small" />
+      <img
+        className="bg-tree-middle"
+        src="/images/tree-middle.svg"
+        alt="Tree middle"
+      />
+      <img
+        className="bg-tree-small"
+        src="/images/tree-small.svg"
+        alt="Tree small"
+      />
     </div>
   );
 }

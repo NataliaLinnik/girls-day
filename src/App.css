@@ -94,13 +94,12 @@ a:hover {
 
 .start-button {
   margin-top: 20px;
-  /* #8FB062 */
-  background-color: red; 
+  background-color: #8fb062;
   border: none;
   border-radius: 3.5rem;
   height: 3.5rem;
   padding: 0 2.5rem;
-  color: red;
+  color: white;
 }
 
 /* Gamescreen ----------------------------------------------------------------------- */
@@ -136,8 +135,7 @@ a:hover {
 
   background-color: white;
   border: none;
-  border-radius: 5px;
-  /* Entfernen für Bug */
+  border-radius: 100%;
   padding: 1.2rem;
   color: #30411F;
   font-size: 40px;
@@ -238,7 +236,7 @@ a:hover {
 }
 
 .clicks-text {
-  font-size: 8px;
+  font-size: 24px;
 }
 
 /* Endscreen ------------------------------------------------------------------------ */
